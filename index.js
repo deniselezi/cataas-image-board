@@ -23,25 +23,3 @@ function updateCountdown() {
 }
 
 setInterval(updateCountdown, 1000)
-
-async function getTags() {
-  var tags = await axios.get("https://cataas.com/api/tags");
-  tags = tags.data;
-  // in future, replace tags.length with tags-per-page limit
-  for (let i = 0 ; i < tags.length ; i++) {
-    // createTag(tags[i]);
-  }
-}
-
-// in future, change the place where the tag is appended
-function createTag(text) {
-  const tagsList = document.getElementById("tags-list");
-  const newLi = document.createElement("li");
-  const newTagText = document.createTextNode(text);
-  newTag = document.createElement("a")
-  newTag.appendChild(newTagText);
-  newLi.appendChild(newTag);
-  tagsList.appendChild(newLi);
-}
-
-getTags();
