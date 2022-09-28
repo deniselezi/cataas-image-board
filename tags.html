@@ -7,23 +7,23 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="./tags.js"></script>
   <link rel="stylesheet" href="./styles.css">
-  <title>tags</title>
+  <link rel="stylesheet" href="./tags.css">
+  <title>catnip - tags</title>
 </head>
 <body>
   <div class="navbar">
     <a href="./index.html">home</a>
-    <a href="./tags.html">tags</a>
-    <a href="./text.html">add text</a>
+    <a href="./tags.html?page=1">browse cats</a>
     <a href="./about.html">about</a>
   </div>
   <div class="content-wrapper tag-wrapper">
+    <form id="search-bar" onsubmit="searchTags(event)">
+      <input id="search-input" type="text" placeholder="Search tags...">
+      <button type="submit">&#128269</button>
+    </form>
     <div class="tags-section">
     </div>  
     <div class="tags-navigation">
-      <!-- paginating -->
-      <!-- &raquo
-      &laquo -->
-
     </div>
     <br>
   </div>

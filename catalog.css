@@ -1,0 +1,61 @@
+.content-wrapper {
+  height: fit-content;
+  min-height: 100%;
+}
+
+.images-section {
+  display: grid;
+  height: 100%;
+  padding: 5%;
+  /* grid-template-rows: 100%; */
+  column-gap: 10%;
+  row-gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid-one {
+  grid-template-columns: 1fr;
+}
+
+.grid-two {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-three {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-four {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.images-section img {
+  max-width: 100%;
+}
+
+.layout-option {
+  display: inline-block;
+  background-color: #FEFFEA;
+  color: black;
+  font-size: 1.5em;
+  padding: 0.5em;
+  margin: 0 0.2em;
+  text-decoration: none;
+  /* border: 1px solid black; */
+  border-radius: 40%;
+}
+
+.layout-option:hover {
+  background-color: #F5F5DC;
+}
+
+#columns {
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+/* 
+add 1, 2, 3 and 4 columns buttons at the top (maybe corner in large displays)
+no change number of columns automatically (no need)
+*/
