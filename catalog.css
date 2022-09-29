@@ -3,6 +3,60 @@
   min-height: 100%;
 }
 
+.filler {
+  display: inline-block;
+  width: 75%;
+}
+
+@media (max-width: 850px) {
+  .filler {
+    width: 0;
+  }
+}
+
+.layout-dropdown {
+  position: relative;
+  display:inline-block;
+  padding-top: 5%;
+}
+
+.dropbtn {
+  padding: 10px;
+  background-color: white;
+}
+
+.dropdown-content {
+  display: none;
+  width: 100%;
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+}
+
+.layout-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.layout-dropdown:hover .dropbtn {
+  background-color: #C8E6D1;
+}
+
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.selected {
+  pointer-events: none;
+}
+
+.selected, .dropdown-content a:hover {
+  background-color: #E7E9EB;
+}
+
 .images-section {
   display: grid;
   height: 100%;
@@ -15,7 +69,8 @@
 }
 
 .grid-one {
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
 }
 
 .grid-two {
@@ -54,8 +109,3 @@
   font-size: 1.5em;
   padding: 1em;
 }
-
-/* 
-add 1, 2, 3 and 4 columns buttons at the top (maybe corner in large displays)
-no change number of columns automatically (no need)
-*/

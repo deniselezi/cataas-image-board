@@ -56,7 +56,7 @@ function createTag(text) {
   tag.classList.add("tag");
   const tagText = document.createTextNode(text);
   tag.appendChild(tagText);
-  tag.href = `catalog.html?tag=${tagText.wholeText}`;
+  tag.href = `catalog.html?tag=${tagText.wholeText}&grid=2`;
   tagsSection.appendChild(tag);
 }
 
