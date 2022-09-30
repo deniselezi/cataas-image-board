@@ -7,9 +7,7 @@ const tags = tagsString.split(',');
 
 function fetchImage() {
   let url = `https://cataas.com/cat/${id}`;
-  console.log(url);
   let image = document.getElementById("cat");
-  console.log(image);
   image.src = url;
 }
 

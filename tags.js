@@ -2,7 +2,6 @@ const axios = window.axios;
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const search = urlParams.get("search");  // either null or a string
-console.log(search);
 const page = Number(urlParams.get("page"));
 var tags = [];
 
@@ -16,15 +15,12 @@ async function getTags() {
 }
 
 function filterTags() {
-  console.log(tags);
   tags = tags.filter(tag =>
     tag.toLowerCase().includes(search.toLowerCase())
   );
-  console.log(tags);
 }
 
 function seedPage(page) {
-  // page 1, tags 0-29, page 2. tags 31-60 etc.
   let j = page * 30;
   if (j >= tags.length) {
     j = tags.length;
@@ -38,9 +34,7 @@ function seedPage(page) {
   if (remainingTags != 0) {
     totalPages = totalPages + 1;
   }
-  console.log(totalPages);
 
-  // need to rewrite this to work with any number of pages
   if (page <= 2) {
     createNavigation(1, 5, page, totalPages);
   } else if (page >= totalPages - 2) {
@@ -73,7 +67,6 @@ function createNavigation(start, end, page, totalPages) {
   goToStart.href = `tags.html?${searchPar}page=1`;
   navigation.appendChild(goToStart);
 
-  let pagesCreated = 0;
   end = totalPages < end ? totalPages : end;
   for (let i = start; i <= end; i++) {
     const link = document.createElement("a");
@@ -94,10 +87,6 @@ function createNavigation(start, end, page, totalPages) {
   goToEnd.href = `tags.html?${searchPar}page=${totalPages}`;
   navigation.appendChild(goToEnd);
 }
-
-// searchTags = () => {
-//   console.log("hhh");
-// };
 
 function searchTags(event) {
   event.preventDefault();

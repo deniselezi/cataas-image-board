@@ -39,10 +39,8 @@ function addLinks() {
   for (let i = 0; i < dropdown.length; i++) {
     let currentChild = dropdown[i];
     currentChild.href = `catalog.html?tag=${tag}&grid=${i + 1}`;
-    console.log(currentChild.href);
     if (i + 1 === Number(grid)) {
       currentChild.classList.add("selected");
-      console.log("sss")
     }
   }
 }
@@ -51,9 +49,8 @@ async function fetchImages(quantity) {
   let imagesToFetch = imagesDisplayed + quantity;
   images = await axios.get(`https://cataas.com/api/cats?tags=${tag}&limit=${imagesToFetch}`);
   images = images.data;
-  console.log(images);
 
-  createImages(images.slice(imagesDisplayed))  // add new img elements to the DOM
+  createImages(images.slice(imagesDisplayed));
 
   imagesDisplayed += quantity;
 }
@@ -72,7 +69,6 @@ function createImages(imageList) {
 function createLink(obj) {
   let objTags = "";
   for (let i = 0; i < obj.tags.length; i++) {
-    console.log(obj.tags[i]);
     objTags += `${obj.tags[i]},`;
   }
   objTags = objTags.substring(0, objTags.length - 1);  // remove last ,
@@ -81,9 +77,7 @@ function createLink(obj) {
 
 window.addEventListener("scroll", () => {
   let distanceScrolled = window.scrollY + window.innerHeight;
-  // subtract some number from scrollHeight to make the web-page load images earlier
   if (distanceScrolled >= document.documentElement.scrollHeight) {
-    // when users scrolls to the bottom, load more images
     fetchImages(10);
   }
 });
