@@ -1,25 +1,9 @@
-const axios = window.axios;
-const loadingTime = Date.now();
-
-function randomCat() {
-  const currentTime = Date.now();
-  const timeRemaining = 30 - ((currentTime - loadingTime) / 1000);
-  if (timeRemaining < 0) {
-    window.location.reload();
+function displaySidebar() {
+  const sidebar = document.querySelector(".sidebar");
+  if (sidebar.id === "hidden") {
+    console.log("h");
+    sidebar.id = "visible"
   } else {
-    console.log(`${timeRemaining} seconds left`);
+    sidebar.id = "hidden"
   }
 }
-
-function updateCountdown() {
-  const currentTime = Date.now();
-  const timeRemaining = 30 - ((currentTime - loadingTime) / 1000);
-  if (timeRemaining > 0) {
-    document.getElementById("countdown").innerText = `get a new cat in: ${Math.round(timeRemaining)}`;
-  } else {
-    document.getElementById("countdown").innerText = "click the button now!";
-    document.getElementById("random-cat-button").disabled = false;
-  }
-}
-
-setInterval(updateCountdown, 1000)

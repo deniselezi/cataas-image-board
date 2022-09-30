@@ -4,14 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./index.js"></script>
   <link rel="stylesheet" href="./styles.css">
   <title>about</title>
 </head>
 <body>
+  <div class="sidebar" id="hidden">
+    <a href="./index.html">home</a>
+    <a href="./tags.html?page=1">browse cats</a>
+    <a href="./about.html">about</a>
+  </div>
   <div class="navbar">
     <a href="./index.html">home</a>
     <a href="./tags.html?page=1">browse cats</a>
     <a href="./about.html">about</a>
+    <a id="sidebar-btn" onmouseover="displaySidebar()">&#8801</a>
   </div>
   <div class="content-wrapper">
   </div>

@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script async src="./catalog.js"></script>
   <script src="./index.js"></script>
+  <script async src="./image.js"></script>
   <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="./catalog.css">
-  <title>catnip - catalog</title>
+  <link rel="stylesheet" href="./image.css">
+  <title>catnip - image</title>
 </head>
 <body>
   <div class="sidebar" id="hidden">
@@ -23,18 +22,11 @@
     <a href="./about.html">about</a>
     <a id="sidebar-btn" onmouseover="displaySidebar()">&#8801</a>
   </div>
-  <div class="content-wrapper">
-      <div class="filler"></div>
-      <div class="layout-dropdown">
-        <button class="dropbtn">Change grid size</button>
-        <div class="dropdown-content">
-          <a href="">1 column</a>
-          <a href="">2 columns</a>
-          <a href="">3 columns</a>
-          <a href="">4 columns</a>
-        </div>
-      </div>
-    <div class="images-section grid-two">
+  <div class="content-wrapper" style="padding: 5% 0">
+    <div class="img-container">
+      <img id="cat" src="">
+    </div>
+    <div class="tags-container">
     </div>
   </div>
 </body>

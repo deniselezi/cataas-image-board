@@ -10,16 +10,20 @@
   <title>catnip</title>
 </head>
 <body>
-  <div class="navbar">
+  <div class="sidebar" id="hidden">
     <a href="./index.html">home</a>
     <a href="./tags.html?page=1">browse cats</a>
     <a href="./about.html">about</a>
   </div>
+  <div class="navbar">
+    <a href="./index.html">home</a>
+    <a href="./tags.html?page=1">browse cats</a>
+    <a href="./about.html">about</a>
+    <a id="sidebar-btn" onmouseover="displaySidebar()">&#8801</a>
+  </div>
   <div class="content-wrapper">
     <h1>random cat!</h1>
     <img id="random-cat" src="https://cataas.com/cat">
-    <!-- <p id="countdown">get a new cat in: 30</p>
-    <button id="random-cat-button" onclick="randomCat()" disabled>new</button> -->
   </div>
 </body>
 </html>
