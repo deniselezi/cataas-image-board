@@ -5,11 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script async src="../js/catalog.js"></script>
-  <script src="../js/index.js"></script>
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/catalog.css">
-  <title>catnip - catalog</title>
+  <script src="./scripts/tags.js"></script>
+  <script src="./scripts/index.js"></script>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/tags.css">
+  <title>catnip - tags</title>
 </head>
 <body>
   <div class="sidebar" id="hidden">
@@ -23,19 +23,16 @@
     <a href="./about.html">about</a>
     <a id="sidebar-btn" onmouseover="displaySidebar()">&#8801</a>
   </div>
-  <div class="content-wrapper">
-      <div class="filler"></div>
-      <div class="layout-dropdown">
-        <button class="dropbtn">Change grid size</button>
-        <div class="dropdown-content">
-          <a href="">1 column</a>
-          <a href="">2 columns</a>
-          <a href="">3 columns</a>
-          <a href="">4 columns</a>
-        </div>
-      </div>
-    <div class="images-section grid-two">
+  <div class="content-wrapper tag-wrapper">
+    <form id="search-bar" onsubmit="searchTags(event)">
+      <input id="search-input" type="text" placeholder="Search tags...">
+      <button type="submit">&#128269</button>
+    </form>
+    <div class="tags-section">
+    </div>  
+    <div class="tags-navigation">
     </div>
+    <br>
   </div>
 </body>
 </html>
