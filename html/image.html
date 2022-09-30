@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="./tags.js"></script>
-  <script src="./index.js"></script>
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="./tags.css">
-  <title>catnip - tags</title>
+  <script src="../js/index.js"></script>
+  <script async src="../js/image.js"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/image.css">
+  <title>catnip - image</title>
 </head>
 <body>
   <div class="sidebar" id="hidden">
@@ -23,16 +22,12 @@
     <a href="./about.html">about</a>
     <a id="sidebar-btn" onmouseover="displaySidebar()">&#8801</a>
   </div>
-  <div class="content-wrapper tag-wrapper">
-    <form id="search-bar" onsubmit="searchTags(event)">
-      <input id="search-input" type="text" placeholder="Search tags...">
-      <button type="submit">&#128269</button>
-    </form>
-    <div class="tags-section">
-    </div>  
-    <div class="tags-navigation">
+  <div class="content-wrapper" style="padding: 5% 0">
+    <div class="img-container">
+      <img id="cat" src="">
     </div>
-    <br>
+    <div class="tags-container">
+    </div>
   </div>
 </body>
 </html>

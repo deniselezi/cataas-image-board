@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="./index.js"></script>
-  <script async src="./image.js"></script>
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="./image.css">
-  <title>catnip - image</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../js/index.js"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>catnip</title>
 </head>
 <body>
   <div class="sidebar" id="hidden">
@@ -22,12 +21,9 @@
     <a href="./about.html">about</a>
     <a id="sidebar-btn" onmouseover="displaySidebar()">&#8801</a>
   </div>
-  <div class="content-wrapper" style="padding: 5% 0">
-    <div class="img-container">
-      <img id="cat" src="">
-    </div>
-    <div class="tags-container">
-    </div>
+  <div class="content-wrapper">
+    <h1>random cat!</h1>
+    <img id="random-cat" src="https://cataas.com/cat">
   </div>
 </body>
 </html>
